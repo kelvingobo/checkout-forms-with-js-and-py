@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+<title>Checkout Forms</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<link rel="stylesheet" href="styles/main.css">
+<link rel="stylesheet" href="styles/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="order">
+	<h2>Place your Bole order here</h2>
+  <hr>
+	<form action="/cgi-bin/process_form.py" method="post" id="form">
+		<div class="input-group">
+			<input type="text" name="fname" id="name" class="form-control" placeholder="*Your name" aria-label="Name" required>
+		</div>
+		<div class="input-group">
+			<input type="text" name="address" id="address" class="form-control" placeholder="*Address" aria-label="Name" required>
+		</div>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <input type="checkbox" id="fish" name="food" aria-label="Checkbox for following text input">
+      </span>
+      <label for="fish">Fish</label>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Submit">Order</button>
+	</form>
+	</div>
+	<div class="order">
+    <h2>Order Summary</h2>
+    <hr>
+		<div class="summary">
+			<p>Subtotal <span id="subTotal">200</span></p>
+			<p>Shipping <span id="shippingFee">0</span></p>
+			<hr>
+			<p>Total <span id="total">200</span></p>
+		</div>
+	</div>
+
+	<script src="scripts/main.js"></script>
+</body>
+</html>
