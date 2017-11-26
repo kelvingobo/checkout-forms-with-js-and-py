@@ -4,8 +4,11 @@ for(var i = 0; i < options.length; i++) {
 }
 
 function calculateTotal(){
-	var subTotal = document.getElementById('subTotal').innerText;
-	var shipping = document.getElementById('shippingFee').innerText;
+  var sT = document.getElementById('subTotal');
+  var s = document.getElementById('shippingFee');
+  var t = document.getElementById('total');
+	var subTotal = sT.innerText;
+	var shipping = s.innerText;
 	subTotal = parseInt(subTotal);
 	shipping = parseInt(shipping);
 	for(var i = 0; i < options.length; i++) {
@@ -19,6 +22,6 @@ function calculateTotal(){
 			subTotal -= 50;
 		}
   }
-	document.getElementById('subTotal').innerText = subTotal;
-	document.getElementById('total').innerText = subTotal + shipping;
+	sT.innerText = subTotal;
+	t.innerText = subTotal + shipping;
 }
